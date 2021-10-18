@@ -1,4 +1,4 @@
-    // --------------------------------------
+// --------------------------------------
 // TCA i2c_mux address_scanner
 //
 // Version 1
@@ -13,6 +13,8 @@
 //
 // This program uses serail port at 112500 baud for output. Wifi only for OTA update only.
 // version 0.4
+//
+//  Special thanks for "Magyar Arduino csoport" FB group members who inspired/helped with this code.
 
 
 #include <Wire.h>
