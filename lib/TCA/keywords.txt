@@ -1,0 +1,19 @@
+TCA		KEYWORD1
+begin		KEYWORD2
+isConnected	KEYWORD2
+enableCh	KEYWORD2
+disableCh	KEYWORD2
+selectCh	KEYWORD2
+isEnabled	KEYWORD2
+getCh		KEYWORD2
+setNextCh	KEYWORD2
+setPrevCh	KEYWORD2
+getMaxCh	KEYWORD2
+setChMask	KEYWORD2
+getChMask	KEYWORD2
+setResetPin	KEYWORD2
+reset		KEYWORD2
+setForced	KEYWORD2
+getForced	KEYWORD2
+  
+  
