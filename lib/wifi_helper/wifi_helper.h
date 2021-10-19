@@ -1,6 +1,6 @@
 #ifndef WIFI_HELPER_H
  #define WIFI_HELPER_H
- 
+ #endif
  #ifdef ESP32 
    #include <WiFi.h>
  #else 
@@ -9,22 +9,22 @@
  #endif
 
  #ifndef AP_SSID
-   #pragma No AP_SSID configured
-   #define AP_SSID Arduino-SoftAP      // Set AP default SSID
+   #pragma message("No AP_SSID configured")
+   #define AP_SSID "Arduino-SoftAP"      // Set AP default SSID
  #else
    #define AP_ON
  #endif
  #ifndef AP_PASS
-   #pragma No AP_PASS configured
-   #define AP_PASS Arduino             //set AP default password
+   #pragma message("No AP_PASS configured")
+   #define AP_PASS "Arduino"             //set AP default password
  #endif
  
  #ifndef CLIENTSSID
-   #pragma No CLIENTSSID configured
+   #pragma message("No CLIENTSSID configured")
    #define CLIENTSSID ""  
  #endif
  #ifndef CLIENTPASSWORD
-   #pragma No CLIENTPASSWORD configured
+   #pragma message("No CLIENTPASSWORD configured")
    #define CLIENTPASSWORD "" 
  #endif
 
@@ -33,5 +33,3 @@
  void wifi_init();
  
  int _wifiConnectRetry = 3;
-
-#endif
