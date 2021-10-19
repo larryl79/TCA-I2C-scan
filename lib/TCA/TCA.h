@@ -19,7 +19,7 @@
 #include "Arduino.h"
 #include "Wire.h"
 
-#define TCA_LIB_VERSION    (F("0.0.2"))
+#define TCA_LIB_VERSION    (F("0.0.3"))
 
 
 class TCA
