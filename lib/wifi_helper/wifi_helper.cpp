@@ -60,7 +60,7 @@ void wifi_init()
    {
     //wifiok=false;
     WiFi.disconnect(true);
-    WiFi.softAP(AP_SSID, AP_PASS) ? "Ready" : "Failed!";
+    WiFi.softAP(AP_SSID, AP_PASS);
     Serial.println("Wifi fail. AP mode on.");
     //delay(2000);
     //wifiok=true;
