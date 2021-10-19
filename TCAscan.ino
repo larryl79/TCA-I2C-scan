@@ -11,11 +11,10 @@
 // Devices with higher bit address might not be seen properly.
 // TCA reset/interrupt pins not supported (yet).
 //
-// This program uses serail port at 112500 baud for output. Wifi only for OTA update only.
+// This program use serial port at 112500 baud for output. Wifi only for OTA update.
 // version 0.4
 //
 //  Special thanks for "Magyar Arduino csoport" FB group members who inspired/helped with this code.
-
 
 #include <Wire.h>
 #include "private.h"                                     // contains users, passwords, hostname configs. with this I don't keep any sensitive information int the code.
@@ -27,7 +26,7 @@ bool mainBusScanNotDone = true;
 int tcaaddr[8]={0,0,0,0,0,0,0,0};   // this will keep possible TCA adresses
 int i=0;                            // tcaaddr pointer
 byte error, address;
-extern int nDevices =0;                    // Device count
+int nDevices =0;                    // Device count
   
 void waitForSerialKeyPress()
   {
@@ -52,6 +51,7 @@ void waitForSerialKeyPress()
  void scan(int tcaaddr[8]) {
   ArduinoOTA.handle();
   int nDevices = 0;
+  int i=0;
   for(address = 1; address < 127; address++ ) 
   {
     ArduinoOTA.handle();
@@ -69,7 +69,7 @@ void waitForSerialKeyPress()
       if (address<16) Serial.print("0");
       Serial.print(address,HEX);
       Serial.println("  !");
-      // add MUX address to the tcaaddr array if address answering.
+      // add MUX address to the tcaaddr array if address is answering.
       // still not checking if MUX or not.
       if ( mainBusScanNotDone and  (address > 111 and address < 120) )   
         {
@@ -111,7 +111,7 @@ void setup()
 void loop()
 {
   int tcaaddr[8]={0,0,0,0,0,0,0,0};
-  byte error, address;
+  mainBusScanNotDone = true;
   Serial.println("\nI2C Scanner\n");
   Serial.println("Scanning...");
   scan((int *) &tcaaddr);
@@ -160,5 +160,4 @@ void loop()
   Serial.println("Program complete.");
     
   waitForSerialKeyPress();
-  mainBusScanNotDone = true;
 }
