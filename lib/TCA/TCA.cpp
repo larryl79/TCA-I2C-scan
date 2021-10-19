@@ -161,6 +161,5 @@ uint8_t TCA::getMaxCh() {
         }
       }
     }
-    else
-    { return _maxCh; }
+  return _maxCh;
 }
