@@ -20,7 +20,7 @@
 #include "private.h"                                     // contains users, passwords, hostname configs. with this I don't keep any sensitive information int the code.
 #include "lib/wifi_helper/wifi_helper.cpp"               // gets information from private.h definitions, and starts wifi AP, and Client for OTA (OTA not touched here.)
 #include "lib/Arduino_Otahelper/Arduino_Otahelper.cpp"   // function for prepare ArduinoOTA.
-#include "lib//TCA/TCA.cpp"
+#include "lib/TCA/TCA.cpp"
 
 bool mainBusScanNotDone = true;
 int tcaaddr[8]={0,0,0,0,0,0,0,0};   // this will keep possible TCA adresses
