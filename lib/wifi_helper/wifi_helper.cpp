@@ -40,7 +40,7 @@ void wifi_init()
    WiFi.softAP(AP_SSID, AP_PASS);
     Serial.print("Iinit AP mode... SSID: ");
     Serial.print(AP_SSID);
-    Serial.print("Password: ");
+    Serial.print("       Password: ");
     Serial.print(AP_PASS);
 	
     Serial.print("       AP IP: ");
