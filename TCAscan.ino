@@ -132,7 +132,7 @@ void loop()
         }
       }
     Serial.println("---------------------------------------------------------");
-    Serial.println("Repeat Scan with cannel canhges.\n");
+    Serial.println("Repeat Scan with channel changes.\n");
     
     for (int i=0; i<sizeof tcaaddr/sizeof tcaaddr[0]; i++)
       {
